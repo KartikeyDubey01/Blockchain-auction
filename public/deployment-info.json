@@ -1,0 +1,29 @@
+{
+  "contractAddress": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "deployerAddress": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "network": "localhost",
+  "chainId": 31337,
+  "deploymentTime": "2025-07-04T04:54:29.090Z",
+  "blockNumber": 36,
+  "sampleItems": 3,
+  "abi": [
+    "function addItem(string memory _itemName, string memory _itemDescription, uint256 _startingPrice) public",
+    "function addScheduledItem(string memory _itemName, string memory _itemDescription, uint256 _startingPrice, uint256 _duration) public",
+    "function placeBid(uint256 _itemId, string memory _bidderName) public payable",
+    "function endAuction(uint256 _itemId) public",
+    "function checkAndEndAuction(uint256 _itemId) public",
+    "function withdraw() public",
+    "function getAllItems() public view returns (tuple(uint256 itemId, string itemName, string itemDescription, uint256 startingPrice, uint256 highestBid, address highestBidder, string bidderName, bool active, uint256 endTime, uint256 createdAt)[])",
+    "function getActiveItems() public view returns (tuple(uint256 itemId, string itemName, string itemDescription, uint256 startingPrice, uint256 highestBid, address highestBidder, string bidderName, bool active, uint256 endTime, uint256 createdAt)[])",
+    "function getItem(uint256 _itemId) public view returns (tuple(uint256 itemId, string itemName, string itemDescription, uint256 startingPrice, uint256 highestBid, address highestBidder, string bidderName, bool active, uint256 endTime, uint256 createdAt))",
+    "function getPendingReturn(address _bidder) public view returns (uint256)",
+    "function getContractBalance() public view returns (uint256)",
+    "function owner() public view returns (address)",
+    "function itemCount() public view returns (uint256)",
+    "function emergencyPause() public",
+    "event ItemAdded(uint256 itemId, string itemName, uint256 startingPrice, uint256 endTime)",
+    "event BidPlaced(uint256 itemId, address bidder, string bidderName, uint256 bidAmount)",
+    "event AuctionEnded(uint256 itemId, address winner, uint256 winningBid)",
+    "event WithdrawalMade(address bidder, uint256 amount)"
+  ]
+}
